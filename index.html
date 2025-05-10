@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful Buttons</title>
+  <style>
+    body {
+      background-color: #0F172A;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 100px;
+      border-radius: 10px;
+      font-size: 16px;
+      color: white;
+      text-decoration: none;
+      border: 2px solid;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .button .arrow {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      margin-top: 5px;
+      transition: background-color 0.3s, color 0.3s;
+      background: white;
+      color: black;
+    }
+
+    .button:hover {
+      color: white; /* keep text white on hover */
+    }
+
+    /* Unique color buttons */
+    .button-1 { border-color: #e6194B; }
+    .button-1 .arrow { background: #e6194B; color: white; }
+    .button-1:hover { background: #e6194B; }
+    .button-1:hover .arrow { background: white; color: #e6194B; }
+
+    .button-2 { border-color: #3cb44b; }
+    .button-2 .arrow { background: #3cb44b; color: white; }
+    .button-2:hover { background: #3cb44b; }
+    .button-2:hover .arrow { background: white; color: #3cb44b; }
+
+    .button-3 { border-color: #ffe119; }
+    .button-3 .arrow { background: #ffe119; color: black; }
+    .button-3:hover { background: #ffe119; }
+    .button-3:hover .arrow { background: black; color: #ffe119; }
+
+    .button-4 { border-color: #4363d8; }
+    .button-4 .arrow { background: #4363d8; color: white; }
+    .button-4:hover { background: #4363d8; }
+    .button-4:hover .arrow { background: white; color: #4363d8; }
+
+    .button-5 { border-color: #f58231; }
+    .button-5 .arrow { background: #f58231; color: white; }
+    .button-5:hover { background: #f58231; }
+    .button-5:hover .arrow { background: white; color: #f58231; }
+
+    .button-6 { border-color: #911eb4; }
+    .button-6 .arrow { background: #911eb4; color: white; }
+    .button-6:hover { background: #911eb4; }
+    .button-6:hover .arrow { background: white; color: #911eb4; }
+
+    .button-7 { border-color: #46f0f0; }
+    .button-7 .arrow { background: #46f0f0; color: black; }
+    .button-7:hover { background: #46f0f0; }
+    .button-7:hover .arrow { background: black; color: #46f0f0; }
+
+    .button-8 { border-color: #f032e6; }
+    .button-8 .arrow { background: #f032e6; color: white; }
+    .button-8:hover { background: #f032e6; }
+    .button-8:hover .arrow { background: white; color: #f032e6; }
+
+    .button-9 { border-color: #bcf60c; }
+    .button-9 .arrow { background: #bcf60c; color: black; }
+    .button-9:hover { background: #bcf60c; }
+    .button-9:hover .arrow { background: black; color: #bcf60c; }
+
+    .button-10 { border-color: #fabebe; }
+    .button-10 .arrow { background: #fabebe; color: black; }
+    .button-10:hover { background: #fabebe; }
+    .button-10:hover .arrow { background: black; color: #fabebe; }
+
+    .button-11 { border-color: #008080; }
+    .button-11 .arrow { background: #008080; color: white; }
+    .button-11:hover { background: #008080; }
+    .button-11:hover .arrow { background: white; color: #008080; }
+
+    .button-12 { border-color: #e6beff; }
+    .button-12 .arrow { background: #e6beff; color: black; }
+    .button-12:hover { background: #e6beff; }
+    .button-12:hover .arrow { background: black; color: #e6beff; }
+
+    .button-13 { border-color: #9A6324; }
+    .button-13 .arrow { background: #9A6324; color: white; }
+    .button-13:hover { background: #9A6324; }
+    .button-13:hover .arrow { background: white; color: #9A6324; }
+
+    .button-14 { border-color: #fffac8; }
+    .button-14 .arrow { background: #fffac8; color: black; }
+    .button-14:hover { background: #fffac8; }
+    .button-14:hover .arrow { background: black; color: #fffac8; }
+
+    .button-15 { border-color: #800000; }
+    .button-15 .arrow { background: #800000; color: white; }
+    .button-15:hover { background: #800000; }
+    .button-15:hover .arrow { background: white; color: #800000; }
+
+    .button-16 { border-color: #aaffc3; }
+    .button-16 .arrow { background: #aaffc3; color: black; }
+    .button-16:hover { background: #aaffc3; }
+    .button-16:hover .arrow { background: black; color: #aaffc3; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>Welcome to.. !</div>
+    <div>Learn Networks.. !</div>
+  </div>
+
+  <div class="button-container">
+    <a href="#" class="button button-1"><span>SD-WAN</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-2"><span>Zscaler</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-3"><span>Routing</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-4"><span>Scenario</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-5"><span>Wireless</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-6"><span>Self</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-7"><span>F5</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-8"><span>Azure</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-9"><span>Lab</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-10"><span>Quiz</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-11"><span>2022</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-12"><span>2023</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-13"><span>Notes</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-14"><span>Basics</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-15"><span>Expert</span><div class="arrow">➡</div></a>
+    <a href="#" class="button button-16"><span>HTML Code</span><div class="arrow">➡</div></a>
+  </div>
+</body>
+</html>
